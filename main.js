@@ -73,15 +73,14 @@ customElements.define('roborally-tile',
                 subtype = "plain_" + Math.floor(Math.random() * 4);
             }
             image.src = type + '/' + subtype + '.png';
-            image.onload = function () {
+            setTimeout(function() {
                 context.save();
                 context.translate(150, 150);
                 context.rotate(degrees * Math.PI / 180);
                 context.translate(-150, -150);
                 context.drawImage(image, 0, 0, width, height);
                 context.restore();
-            };
-            setTimeout(100);
+            }, 100);
         }
     }
 );
