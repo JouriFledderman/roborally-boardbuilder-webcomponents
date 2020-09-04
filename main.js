@@ -14,6 +14,7 @@ customElements.define('roborally-tile',
             const walls = this.getAttribute('walls');
             const lasers = this.getAttribute('lasers');
             const checkpoint = this.getAttribute('checkpoint') ;
+            const dividers= this.getAttribute('dividers') ;
 
             this.createAndRotateImage(context, 'tiles', type, this.getDegrees(this.getAttribute('direction')));
 
@@ -22,21 +23,35 @@ customElements.define('roborally-tile',
             }
 
             if (lasers) {
-                lasers.split(",")
-                    .forEach(direction => {
+                const json = JSON.parse(lasers);
+                json.forEach(laser => {
+                    laser.directions.forEach(direction => {
                         let wallArray = [];
                         if (walls) {
                             wallArray = walls.split(",")
                         }
+
+                        const suffix = laser.type === "single" ? "" : "_double";
                         const laserType = wallArray.indexOf(direction) == -1 ? "laser" : "laserWall";
-                        this.createAndRotateImage(context, 'laser', laserType, this.getDegrees(direction))
+
+                        this.createAndRotateImage(context, 'laser', laserType + suffix, this.getDegrees(direction))
                     })
+                })
             }
 
             if (walls) {
                 walls.split(",")
                     .forEach(direction => {
                         this.createAndRotateImage(context, 'walls', 'wall', this.getDegrees(direction), 300, 48)
+                })
+            }
+
+            if (dividers) {
+                const json = JSON.parse(dividers);
+                json.forEach(divider => {
+                    divider.directions.forEach(direction => {
+                        this.createAndRotateImage(context, 'dividers', divider.type, this.getDegrees(direction))
+                    })
                 })
             }
 

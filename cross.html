@@ -10,7 +10,7 @@
         <roborally-tile type="conveyer_straight" direction="bottom"></roborally-tile>
         <roborally-tile type="plain" walls="top"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
-        <roborally-tile type="plain" walls="top" lasers="bottom"></roborally-tile>
+        <roborally-tile type="plain" walls="top" lasers='[{"type": "single", "directions": ["bottom"]}]'></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="bottom"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="top"></roborally-tile>
         <roborally-tile type="plain" walls="top"></roborally-tile>
@@ -23,11 +23,11 @@
         <roborally-tile type="conveyer_rotate-left" direction="right"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="right"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="right"></roborally-tile>
-        <roborally-tile type="conveyer_straight" direction="right" lasers="bottom"></roborally-tile>
+        <roborally-tile type="conveyer_straight" direction="right" lasers='[{"type": "single", "directions": ["bottom"]}]'></roborally-tile>
         <roborally-tile type="conveyer_tsplit-right" direction="bottom"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="top"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
-        <roborally-tile type="plain" lasers="bottom"></roborally-tile>
+        <roborally-tile type="plain" lasers='[{"type": "double", "directions": ["bottom"]}]'></roborally-tile>
         <roborally-tile type="plain" walls="top,right"></roborally-tile>
         <roborally-tile type="conveyer_rotate-right" direction="top"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="left"></roborally-tile>
@@ -36,11 +36,11 @@
         <roborally-tile type="plain"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
-        <roborally-tile type="plain" walls="bottom" lasers="bottom"></roborally-tile>
+        <roborally-tile type="plain" walls="bottom" lasers='[{"type": "single", "directions": ["bottom"]}]'></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="bottom"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="top"></roborally-tile>
         <roborally-tile type="plain" walls="left"></roborally-tile>
-        <roborally-tile type="plain" lasers="bottom"></roborally-tile>
+        <roborally-tile type="plain" lasers='[{"type": "double", "directions": ["bottom"]}]'></roborally-tile>
         <roborally-tile type="pit_single"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
         <roborally-tile type="plain" walls="right"></roborally-tile>
@@ -53,7 +53,7 @@
         <roborally-tile type="conveyer_rotate-right" direction="left"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="top"></roborally-tile>
         <roborally-tile type="plain" walls="bottom,left"></roborally-tile>
-        <roborally-tile type="plain" walls="bottom" lasers="bottom"></roborally-tile>
+        <roborally-tile type="plain" walls="bottom" lasers='[{"type": "double", "directions": ["bottom"]}]'></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
         <roborally-tile type="plain" walls="bottom"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
@@ -112,16 +112,16 @@
 
         <roborally-tile type="plain"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
-        <roborally-tile type="plain" walls="left" lasers="left"></roborally-tile>
-        <roborally-tile type="plain"lasers="left"></roborally-tile>
+        <roborally-tile type="plain" walls="left" lasers='[{"type": "single", "directions": ["left"]}]'></roborally-tile>
+        <roborally-tile type="plain"lasers='[{"type": "single", "directions": ["left"]}]'></roborally-tile>
         <roborally-tile type="plain" walls="top,left"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="bottom"></roborally-tile>
         <roborally-tile type="conveyer_straight" direction="top"></roborally-tile>
-        <roborally-tile type="plain" walls="left" lasers="left"></roborally-tile>
-        <roborally-tile type="plain" walls="right" lasers="left"></roborally-tile>
+        <roborally-tile type="plain" walls="left" lasers='[{"type": "single", "directions": ["left"]}]'></roborally-tile>
+        <roborally-tile type="plain" walls="right" lasers='[{"type": "single", "directions": ["left"]}]'></roborally-tile>
         <roborally-tile type="pit_single"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
-        <roborally-tile type="plain"></roborally-tile>
+        <roborally-tile type="plain" dividers="[{type: plain, directions:[top]}]"></roborally-tile>
 
         <roborally-tile type="repair_single" walls="left"></roborally-tile>
         <roborally-tile type="plain"></roborally-tile>
